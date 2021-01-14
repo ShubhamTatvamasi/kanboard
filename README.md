@@ -5,6 +5,7 @@ deploy kanboard
 kubectl create deployment kanboard --image=kanboard/kanboard
 kubectl expose deployment kanboard --port=80 --name=kanboard
 ```
+> user: `admin` pass: `admin`
 
 delete everything:
 ```bash
