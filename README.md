@@ -21,11 +21,12 @@ metadata:
   name: kanboard
   annotations:
     nginx.org/websocket-services: kanboard
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   tls:
     - hosts:
       - kanboard.k8s.shubhamtatvamasi.com
-      secretName: letsencrypt
+      secretName: kanboard-tls
   rules:
     - host: kanboard.k8s.shubhamtatvamasi.com
       http:
